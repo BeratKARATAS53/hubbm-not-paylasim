@@ -1,0 +1,42 @@
+{
+	"tasks": [
+		{
+			"isBackground": true,
+			"problemMatcher": {
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "(.*?)"
+					},
+					"endsPattern": {
+						"regexp": "bundle generation complete"
+					}
+				},
+				"owner": "typescript",
+				"pattern": "$tsc"
+			},
+			"script": "start",
+			"type": "npm"
+		},
+		{
+			"isBackground": true,
+			"problemMatcher": {
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": {
+						"regexp": "(.*?)"
+					},
+					"endsPattern": {
+						"regexp": "bundle generation complete"
+					}
+				},
+				"owner": "typescript",
+				"pattern": "$tsc"
+			},
+			"script": "test",
+			"type": "npm"
+		}
+	],
+	// For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558
+	"version": "2.0.0"
+}
