@@ -8,3 +8,28 @@ body {
 	color: #A2FFA0;
 	font-family: 'Poppins', sans-serif;
 }
+
+.badge {
+	display: flex;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	position: absolute;
+	right: 5px;
+
+	@for $i from 1 through 3 {
+		&:nth-child(#{$i}) {
+			top: #{5px + ($i - 1) * 25px};
+		}
+	}
+
+	&:empty {
+		display: block;
+	}
+}
+
+@for $i from 1 through 16 {
+	.fs-#{$i} {
+		font-size: #{$i}px;
+	}
+}

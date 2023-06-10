@@ -2,7 +2,7 @@
 	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
 	"newProjectRoot": "projects",
 	"projects": {
-		"profile": {
+		"public": {
 			"architect": {
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
@@ -40,7 +40,7 @@
 						"index": "src/index.html",
 						"inlineStyleLanguage": "scss",
 						"main": "src/main.ts",
-						"outputPath": "dist/profile",
+						"outputPath": "dist/public",
 						"polyfills": [
 							"zone.js"
 						],
@@ -54,17 +54,17 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "profile:build"
+						"browserTarget": "public:build"
 					}
 				},
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"development": {
-							"browserTarget": "profile:build:development"
+							"browserTarget": "public:build:development"
 						},
 						"production": {
-							"browserTarget": "profile:build:production"
+							"browserTarget": "public:build:production"
 						}
 					},
 					"defaultConfiguration": "development"

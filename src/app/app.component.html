@@ -4,12 +4,50 @@
 		<input type="text" placeholder="Arama Yap">
 		<button type="button" class="btn btn-primary">Ara</button>
 	</div>
-	<div class="container">
+	<div class="main-container">
 		<div class="side-panel">
-
+			<div class="profile">
+				<img src="../assets/profile.jpeg" alt="D. Berat KARATAŞ">
+				<h4>D. Berat KARATAŞ</h4>
+				<a href="https://beratkaratas53.github.io/profile-blog-deploy" target="_blank">Hakkımda</a>
+			</div>
+			<div class="side-menu position-relative">
+				<button class="btn" [ngClass]="activeButton === 'home' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('home')">Ana Sayfa</button>
+				<button class="btn" [ngClass]="activeButton === 'first-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('first-class')">
+					1. Sınıf Dersleri
+					<span class="badge {{badgeClassMap['first-class']}}"></span>
+				</button>
+				<button class="btn" [ngClass]="activeButton === 'second-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('second-class')">
+					2. Sınıf Dersleri
+					<span class="badge {{badgeClassMap['second-class']}}"></span>
+				</button>
+				<button class="btn" [ngClass]="activeButton === 'third-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('third-class')">
+					3. Sınıf Dersleri
+					<span class="badge {{badgeClassMap['third-class']}}"></span>
+				</button>
+				<button class="btn" [ngClass]="activeButton === 'fourth-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('fourth-class')">
+					4. Sınıf Dersleri
+					<span class="badge {{badgeClassMap['fourth-class']}}"></span>
+				</button>
+				<button class="btn" [ngClass]="activeButton === 'technicals' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('technicals')">
+					Teknik Dersler
+					<span class="badge {{badgeClassMap['technicals']}}"></span>
+				</button>
+				<button class="btn" [ngClass]="activeButton === 'versionNotes' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('versionNotes')">Sürüm Notları</button>
+			</div>
 		</div>
 		<div class="card-container">
-
+			<ng-container *ngFor="let category of cardMap | keyvalue">
+				<div class="card" *ngFor="let card of (category.value || [])">
+					<span class="badge {{badgeClassMap[badge]}}" *ngFor="let badge of card.badges"></span>
+					<img [src]="card.image" [alt]="card.code">
+					<div class="card-body">
+						<h4 class="text-success">{{ card.code }}</h4>
+						<h6 class="text-success">{{ card.title }}</h6>
+					</div>
+					<span class="text-gray fs-10 mb-2 fw-bold">Tarih: {{ card.createdAt | date: 'fullDate' }}</span>
+				</div>
+			</ng-container>			
 		</div>
 	</div>
 </div>

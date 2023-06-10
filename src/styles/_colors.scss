@@ -1,0 +1,48 @@
+$bg-color: #d9d9d93d;
+$primary: #a0e4ff;
+$success: #a2ffa0;
+$warning: #ffd3a0;
+$danger: #ffa0a0;
+$secondary: #424867;
+$gray: #b1b1b1;
+
+$text-dark-color: #424867;
+$text-light-color: #a2ffa0;
+
+$colors: (
+	"primary": $primary,
+	"success": $success,
+	"warning": $warning,
+	"danger": $danger,
+	"secondary": $secondary,
+	"gray": $gray,
+);
+
+@each $color, $code in $colors {
+	.btn-#{$color} {
+		background-color: $code;
+		color: $text-dark-color;
+		border: none;
+
+		&:hover {
+			background-color: darken($code, 5%);
+			color: $text-dark-color;
+		}
+	}
+
+	.text-#{$color} {
+		color: $code !important;
+	}
+
+	.badge-#{$color} {
+		background-color: $code;
+	}
+}
+
+.btn-secondary {
+	color: $text-light-color;
+
+	&:hover {
+		color: $text-light-color;
+	}
+}
