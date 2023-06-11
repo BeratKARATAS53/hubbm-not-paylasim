@@ -1,9 +1,12 @@
-$bg-color: #d9d9d93d;
+$bg-color: #d9d9d91a;
 $primary: #a0e4ff;
 $success: #a2ffa0;
 $warning: #ffd3a0;
 $danger: #ffa0a0;
 $secondary: #424867;
+$purple: #c262c7;
+$light: aliceblue;
+
 $gray: #b1b1b1;
 
 $text-dark-color: #424867;
@@ -16,6 +19,8 @@ $colors: (
 	"danger": $danger,
 	"secondary": $secondary,
 	"gray": $gray,
+	"purple": $purple,
+	"light": $light,
 );
 
 @each $color, $code in $colors {

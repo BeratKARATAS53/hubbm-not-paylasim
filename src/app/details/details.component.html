@@ -1,0 +1,34 @@
+<div class="modal-header">
+	<img [src]="card.image" [alt]="card.code" width="500">
+	<h4 class="modal-title text-center">{{ card.code }} - {{ card.title | uppercase }}</h4>
+	<span class="text-gray fs-10 mb-2 fw-bold">Tarih: {{ card.createdAt | date: 'fullDate' }}</span>
+</div>
+<div class="modal-body">
+	<p *ngIf="card.website">
+		<span class="text-success">Site: </span>
+		<a class="text-primary" [href]="card.website" target="_blank">{{ card.website }}</a>
+	</p>
+	<p *ngIf="card.exams">
+		<span class="text-success">Sınavlar: </span>
+		<a class="text-primary" [href]="card.exams" target="_blank">{{ card.exams }}</a>
+	</p>
+	<p *ngIf="card.others">
+		<span class="text-success">Yararlı Notlar veya Linkler: </span>
+		<ul>
+			<li *ngFor="let other of card.others | keyvalue" class="text-warning">
+				{{ other.key }}:
+				<a class="text-primary" [href]="other.value" target="_blank">{{ other.value }}</a>
+			</li>
+		</ul>
+	<p *ngIf="card.books">
+		<span class="text-success">Yararlı Kitaplar: </span>
+		<ul>
+			<li *ngFor="let book of card.books | keyvalue" class="text-warning">
+				{{ book.key }}:
+				<a class="text-primary" [href]="book.value" target="_blank">{{ book.value }}</a>
+			</li>
+		</ul>
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn btn-success" (click)="close()">Kapat</button>
+</div>

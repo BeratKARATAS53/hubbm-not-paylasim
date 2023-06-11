@@ -1,20 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+@import 'styles/colors';
 
 body {
-	background-color: #161722;
+	background-color: #161722 !important;
 	display: flex;
 	justify-content: center;
-	color: #A2FFA0;
+	color: $success !important;
 	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+}
+
+a {
+	color: #8E8E8E !important;
+	text-decoration: none !important;
+	outline: none !important;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 4px;
+	background: $bg-color;
+	border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $success;
+	border-radius: 5px;
 }
 
 .badge {
 	display: flex;
 	width: 20px;
 	height: 20px;
-	border-radius: 50%;
-	position: absolute;
+	border-radius: 50% !important;
+	position: absolute !important;
 	right: 5px;
 
 	@for $i from 1 through 3 {
@@ -24,7 +44,7 @@ body {
 	}
 
 	&:empty {
-		display: block;
+		display: block !important;
 	}
 }
 
@@ -33,3 +53,6 @@ body {
 		font-size: #{$i}px;
 	}
 }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

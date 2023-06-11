@@ -1,0 +1,24 @@
+@import '../../styles/colors';
+
+::ng-deep .modal-content {
+	background-color: #161722;
+	border-radius: 20px;
+
+	* {
+		border: none;
+	}
+}
+
+.modal-header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	img {
+		margin-bottom: 20px;
+	}
+}
+
+li {
+	word-wrap: break-word;
+}

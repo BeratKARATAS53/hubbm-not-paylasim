@@ -1,4 +1,6 @@
-export const secondClassLessons = [
+import { Card } from "src/app/card";
+
+export const secondClassLessons: Card[] = [
 	{
 		code: 'BBM201',
 		title: 'Data Structures',
@@ -14,19 +16,21 @@ export const secondClassLessons = [
 			'C FAQ': 'https://c-faq.com/',
 		},
 		badges: ['second-class'],
+		keywords: ['veri yapılarına giriş'],
 		createdAt: '2019-02-14',
 	},
 	{
 		code: 'BBM202',
 		title: 'Algorithms',
-		image: 'assets/bbm202.jpg',
+		image: 'assets/bbm202.png',
 		website: 'https://web.cs.hacettepe.edu.tr/~bbm202/',
 		exams: 'https://drive.google.com/drive/folders/1bSNjkP5S-qnl-mZ8tWIMadkQLnuokMSc?usp=sharing',
 		others: {
-			'My Notes (Türkçe)': 'https://drive.google.com/file/d/1Hf2yyTXx17OEoXaX97dvbZADMDW95bry/view?usp=sharing',
+			'Özet': 'https://drive.google.com/file/d/1Hf2yyTXx17OEoXaX97dvbZADMDW95bry/view?usp=sharing',
 		},
-		books: {},
+		books: null,
 		badges: ['second-class'],
+		keywords: ['algoritmalar'],
 		createdAt: '2019-02-14',
 	},
 	{
@@ -38,8 +42,9 @@ export const secondClassLessons = [
 		others: {
 			'CheatSheet': 'https://drive.google.com/file/d/1dZSYZjrIOyPNtYkcl3cT7RU_fCedQK6v/view?usp=sharing',
 		},
-		books: {},
+		books: null,
 		badges: ['second-class'],
+		keywords: ['matematiksel yapılar'],
 		createdAt: '2019-02-14',
 	},
 	{
@@ -56,6 +61,7 @@ export const secondClassLessons = [
 			'Digital Design and Computer Architecture, D. Harris, S. Harris, Morgan Kaufmann, 2007.': 'http://hron.fei.tuke.sk/~adam/cas/Digital%20Design%20and%20Computer%20Architecture%20(2nd%20Ed).pdf',
 		},
 		badges: ['second-class'],
+		keywords: ['mantıksal tasarım'],
 		createdAt: '2019-02-14',
 	},
 	{
@@ -65,11 +71,12 @@ export const secondClassLessons = [
 		website: 'https://web.cs.hacettepe.edu.tr/~bbm234/',
 		exams: 'https://drive.google.com/drive/folders/1E4Wdv1vQQY112Y8d9NkDwSC_4Tk8B4ar?usp=sharing',
 		others: {
-			'Exercises': 'https://drive.google.com/drive/folders/1JZzHWy2o_Hei53xQ-bG0LDGRmsZv2xjb?usp=sharing',
-			'Slides': 'https://drive.google.com/drive/folders/1H_jZDYj2EI9MQsVzIljEK7PKC-z9TeZe?usp=sharing',
+			'Notlar': 'https://drive.google.com/drive/folders/1JZzHWy2o_Hei53xQ-bG0LDGRmsZv2xjb?usp=sharing',
+			'Slaytlar': 'https://drive.google.com/drive/folders/1H_jZDYj2EI9MQsVzIljEK7PKC-z9TeZe?usp=sharing',
 		},
-		books: {},
+		books: null,
 		badges: ['second-class'],
+		keywords: ['bilgisayar organizasyonu'],
 		createdAt: '2019-02-14',
 	},
 	{
@@ -79,13 +86,14 @@ export const secondClassLessons = [
 		website: null,
 		exams: 'https://drive.google.com/drive/folders/1E4Wdv1vQQY112Y8d9NkDwSC_4Tk8B4ar?usp=sharing',
 		others: {
-			'Exercises': 'https://drive.google.com/drive/folders/1-Q5FRaZ4NHJNy2hDYffeBV-YhqfWNoMk?usp=sharing',
-			'My Notes (Türkçe)': 'https://drive.google.com/file/d/1WeBFGm3uwvtXkSd6wltqALHS0-eNBYRt/view?usp=sharing',
+			'Notlar': 'https://drive.google.com/drive/folders/1-Q5FRaZ4NHJNy2hDYffeBV-YhqfWNoMk?usp=sharing',
+			'Özet': 'https://drive.google.com/file/d/1WeBFGm3uwvtXkSd6wltqALHS0-eNBYRt/view?usp=sharing',
 		},
 		books: {
 			'Lineer Cebir Ders Notları, Yrd. Doç. Dr. Hüseyin BILGIÇ': 'https://drive.google.com/file/d/1THRE1zyFtI7fU5CjEQpizlJrsgObd4Bt/view?usp=sharing',
 		},
 		badges: ['second-class'],
+		keywords: ['doğrusal cebir', 'matematik'],
 		createdAt: '2019-02-14',
 	},
 	{
@@ -95,13 +103,14 @@ export const secondClassLessons = [
 		website: null,
 		exams: null,
 		others: {
-			'Exercises': 'https://drive.google.com/drive/folders/1lr5e05yDZIRMyiNutlxjE3uYoZKIzoqG?usp=sharing',
-			'Slides': 'https://drive.google.com/drive/folders/1doNNtwNnbPrLjZ9tCmyP4bc758UBLE-O?usp=sharing',
-			'My Notes (Türkçe)': 'https://drive.google.com/file/d/1m_TOpsQ6DRemzMHGSXym438dlktQHZ0h/view?usp=sharing',
-			'Tables': 'https://drive.google.com/file/d/1RIwk-XCeDkagc8fpOwCheYIXEVQhzKmU/view?usp=sharing'
+			'Notlar': 'https://drive.google.com/drive/folders/1lr5e05yDZIRMyiNutlxjE3uYoZKIzoqG?usp=sharing',
+			'Slaytlar': 'https://drive.google.com/drive/folders/1doNNtwNnbPrLjZ9tCmyP4bc758UBLE-O?usp=sharing',
+			'Özet': 'https://drive.google.com/file/d/1m_TOpsQ6DRemzMHGSXym438dlktQHZ0h/view?usp=sharing',
+			'Tablolar': 'https://drive.google.com/file/d/1RIwk-XCeDkagc8fpOwCheYIXEVQhzKmU/view?usp=sharing'
 		},
-		books: {},
+		books: null,
 		badges: ['second-class'],
+		keywords: ['olasılık', 'matematik'],
 		createdAt: '2019-02-14',
 	},
 	{
@@ -111,11 +120,12 @@ export const secondClassLessons = [
 		website: null,
 		exams: null,
 		others: {
-			'Slides': 'https://drive.google.com/drive/folders/1doNNtwNnbPrLjZ9tCmyP4bc758UBLE-O?usp=sharing',
-			'Exercises': 'https://drive.google.com/drive/folders/14kxfxsFTTSU-Q3wQBbU8nYCW8exSwqy-?usp=sharing',
+			'Slaytlar': 'https://drive.google.com/drive/folders/1doNNtwNnbPrLjZ9tCmyP4bc758UBLE-O?usp=sharing',
+			'Notlar': 'https://drive.google.com/drive/folders/14kxfxsFTTSU-Q3wQBbU8nYCW8exSwqy-?usp=sharing',
 		},
-		books: {},
+		books: null,
 		badges: ['second-class'],
+		keywords: ['istatistik', 'matematik'],
 		createdAt: '2019-02-14',
 	},
 ];
