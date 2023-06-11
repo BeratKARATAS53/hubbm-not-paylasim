@@ -9,11 +9,13 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DetailsComponent } from './details/details.component';
+import { GDPRComponent } from './gdpr/gdpr.component';
+import { MainComponent } from './main/main.component';
 
 registerLocaleData(localeTr);
 
 @NgModule({
-	declarations: [AppComponent, DetailsComponent],
+	declarations: [AppComponent, DetailsComponent, GDPRComponent, MainComponent],
 	imports: [
 		AppRoutingModule,
 		BrowserModule,

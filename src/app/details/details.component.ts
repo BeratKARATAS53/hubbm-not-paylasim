@@ -5,9 +5,9 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Card } from '../card';
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+	selector: 'app-details',
+	templateUrl: './details.component.html',
+	styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent {
 	card: Card = {
