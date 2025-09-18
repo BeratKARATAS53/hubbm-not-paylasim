@@ -1,4 +1,4 @@
-import { Card } from "src/app/card";
+import { Card } from 'src/app/card';
 
 export const secondClassLessons: Card[] = [
 	{
@@ -9,6 +9,7 @@ export const secondClassLessons: Card[] = [
 		exams: 'https://drive.google.com/drive/folders/1nSPzDaHyKxiMA4kMIfFsKf9aJpdCplW4',
 		others: {
 			'BigO() CheatSheet': 'https://drive.google.com/file/d/1FK1rsINVakeJ55_B5b8ggculkorN3CFx/view',
+			'Notlar': 'https://drive.google.com/drive/folders/1DlTbAXhIBSHm5Y7HX_EIh7dHwM_Jjf3m?usp=drive_link',
 		},
 		books: {
 			'ISO/IEC 9899 Committee Draft': 'https://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf',
@@ -27,6 +28,7 @@ export const secondClassLessons: Card[] = [
 		exams: 'https://drive.google.com/drive/folders/1bSNjkP5S-qnl-mZ8tWIMadkQLnuokMSc?usp=sharing',
 		others: {
 			'Özet': 'https://drive.google.com/file/d/1Hf2yyTXx17OEoXaX97dvbZADMDW95bry/view?usp=sharing',
+			'Notlar': 'https://drive.google.com/drive/folders/1guv59OH8wkaZoRNgPA9H1k2BBkCBukHc?usp=drive_link'
 		},
 		books: null,
 		badges: ['second-class'],
@@ -41,6 +43,7 @@ export const secondClassLessons: Card[] = [
 		exams: 'https://drive.google.com/drive/folders/1dT4wmxj4UZKmSmrkic4dJVqPr-EPk7QR?usp=sharing',
 		others: {
 			'CheatSheet': 'https://drive.google.com/file/d/1dZSYZjrIOyPNtYkcl3cT7RU_fCedQK6v/view?usp=sharing',
+			'Notlar': 'https://drive.google.com/drive/folders/1_zEuexycaFF7ZSsd9vgmW2gYP2l7sLzS?usp=drive_link',
 		},
 		books: null,
 		badges: ['second-class'],
@@ -55,6 +58,7 @@ export const secondClassLessons: Card[] = [
 		exams: 'https://drive.google.com/drive/folders/1nSPzDaHyKxiMA4kMIfFsKf9aJpdCplW4?usp=sharing',
 		others: {
 			'BigO() CheatSheet': 'https://drive.google.com/file/d/1FK1rsINVakeJ55_B5b8ggculkorN3CFx/view?usp=sharing',
+			'Notlar': 'https://drive.google.com/drive/folders/1M9GvI3Wh99mMotk5EFwervEkWB6ftsDM?usp=drive_link',
 		},
 		books: {
 			'Digital Design, M. Morris Mano and Michael D. Ciletti, Prentice Hall.': 'https://profs.basu.ac.ir/abdoli/upload_file/digital%20design_morris%20mano_5th%20edition(722.3450.file_ref.3302.3611).pdf',
@@ -62,6 +66,20 @@ export const secondClassLessons: Card[] = [
 		},
 		badges: ['second-class'],
 		keywords: ['mantıksal tasarım'],
+		createdAt: '2019-02-14',
+	},
+	{
+		code: 'BBM233',
+		title: 'Logic Design Lab',
+		image: 'assets/bbm231.jpg',
+		website: null,
+		exams: null,
+		others: {
+			'Notlar': 'https://drive.google.com/drive/folders/1Id2l1IUSg0wWjupSIw13-2pI_VMh6z0F?usp=drive_link',
+		},
+		books: null,
+		badges: ['second-class'],
+		keywords: ['mantıksal tasarım laboratuvarı'],
 		createdAt: '2019-02-14',
 	},
 	{
@@ -126,6 +144,20 @@ export const secondClassLessons: Card[] = [
 		books: null,
 		badges: ['second-class'],
 		keywords: ['istatistik', 'matematik'],
+		createdAt: '2019-02-14',
+	},
+	{
+		code: 'ELE299',
+		title: 'Electric',
+		image: 'assets/ele299.jpg',
+		website: null,
+		exams: null,
+		others: {
+			'Notlar': 'https://drive.google.com/drive/folders/1QhINmN3wZ2cMKj2d3QgVrzkcaKTO0ID2?usp=drive_link',
+		},
+		books: null,
+		badges: ['second-class'],
+		keywords: ['elektrik devreleri', 'elektronik'],
 		createdAt: '2019-02-14',
 	},
 ];

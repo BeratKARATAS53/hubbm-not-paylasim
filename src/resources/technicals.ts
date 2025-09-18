@@ -1,4 +1,4 @@
-import { Card } from "src/app/card";
+import { Card } from 'src/app/card';
 
 export const technicals: Card[] = [
 	{

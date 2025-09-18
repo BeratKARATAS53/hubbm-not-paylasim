@@ -1,4 +1,4 @@
-import { Card } from "src/app/card";
+import { Card } from 'src/app/card';
 
 export const thirdClassLessons: Card[] = [
 	{
@@ -43,6 +43,20 @@ export const thirdClassLessons: Card[] = [
 		},
 		badges: ['third-class'],
 		keywords: ['sistem programlama'],
+		createdAt: '2019-02-02',
+	},
+	{
+		code: 'BBM342',
+		title: 'Operating Systems',
+		image: 'assets/bbm341.webp',
+		website: 'https://web.cs.hacettepe.edu.tr/~bbm342/',
+		exams: null,
+		others: {
+			'Notlar': 'https://drive.google.com/drive/folders/1-UpAuvojf0lDZqrGjbdZv-7y8WeFO4PP?usp=drive_link'
+		},
+		books: null,
+		badges: ['third-class'],
+		keywords: ['işletim sistemleri'],
 		createdAt: '2019-02-02',
 	},
 	{

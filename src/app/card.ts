@@ -9,4 +9,5 @@ export type Card = {
 	badges: string[];
 	keywords: string[];
 	createdAt: string;
+	shown?: boolean;
 };

@@ -1,4 +1,4 @@
-import { Card } from "src/app/card";
+import { Card } from 'src/app/card';
 
 export const firstClassLessons: Card[] = [
 	{
@@ -8,12 +8,14 @@ export const firstClassLessons: Card[] = [
 		website: null,
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/drive/u/1/folders/1DcsLe8BVMt_rtJTkODI81GUxYOWx9vbs',
+			// ! Not silinmiş.
+			//'Notlar': 'https://drive.google.com/drive/u/1/folders/1DcsLe8BVMt_rtJTkODI81GUxYOWx9vbs',
 		},
 		books: null,
 		badges: ['first-class'],
 		keywords: ['birinci sınıf semineri', 'ain 101'],
 		createdAt: '2023-06-11',
+		shown: false,
 	},
 	{
 		code: 'BBM101',
@@ -22,7 +24,7 @@ export const firstClassLessons: Card[] = [
 		website: 'https://web.cs.hacettepe.edu.tr/~bbm101/',
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/drive/folders/1gBAx4mKarywI88Iqgv3Y2Hym1cs8RbkT?usp=drive_link',
+			'Notlar': 'https://drive.google.com/drive/folders/14j8FOWH9kIM_gGa9NG1xDppl8Yov0j34?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
@@ -36,7 +38,7 @@ export const firstClassLessons: Card[] = [
 		website: 'https://web.cs.hacettepe.edu.tr/~bbm102/',
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/drive/folders/1SjxaiDJy_wT6Ogk2WMrDtuWPpagORPr0?usp=drive_link',
+			'Notlar': 'https://drive.google.com/drive/folders/1LhGeSaB-l1Rq0yruXKaEOamZI8SJeSbh?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
@@ -50,7 +52,7 @@ export const firstClassLessons: Card[] = [
 		website: 'https://web.cs.hacettepe.edu.tr/~bbm103/',
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/drive/folders/1KHxRWmgw6c0P8OLlIXuZsf2WSCghv4hW?usp=drive_link',
+			'Notlar': 'https://drive.google.com/drive/folders/10DBoDJkyu4jZuZKK2C7jqPeO3mA0opQF?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
@@ -64,7 +66,9 @@ export const firstClassLessons: Card[] = [
 		website: null,
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/drive/folders/1MVsRb28y1Cvb3eBt0daXQfXLFxCDWd2b?usp=drive_link',
+			'Notlar -1': 'https://drive.google.com/drive/folders/1MVsRb28y1Cvb3eBt0daXQfXLFxCDWd2b?usp=drive_link',
+			'Notlar -2': 'https://drive.google.com/drive/folders/1y_MELtzFTWNjQ1Y0rgqXRA_EIZEE3Oqz?usp=drive_link',
+			'Notlar -3': 'https://drive.google.com/drive/folders/10DBoDJkyu4jZuZKK2C7jqPeO3mA0opQF?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
@@ -106,7 +110,8 @@ export const firstClassLessons: Card[] = [
 		website: null,
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/drive/folders/1jRz54iMRI-WbQR1bjNOlcgWEeDcrXW0i?usp=drive_link',
+			'Notlar -1': 'https://drive.google.com/drive/folders/1jRz54iMRI-WbQR1bjNOlcgWEeDcrXW0i?usp=drive_link',
+			'Notlar -2': 'https://drive.google.com/drive/folders/1E6Ja46ekvz-600a17y73NQBD7owN0ofl?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
@@ -120,7 +125,8 @@ export const firstClassLessons: Card[] = [
 		website: null,
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/drive/folders/1MlhCK5NhUkM2GRLVt4t3xkWq80NnlnKm?usp=drive_link',
+			'Notlar -1': 'https://drive.google.com/drive/folders/1MlhCK5NhUkM2GRLVt4t3xkWq80NnlnKm?usp=drive_link',
+			'Notlar -2': 'https://drive.google.com/drive/folders/1iQ55N1VMSffew1F9YuLjiCuKWPKwwHOo?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
@@ -162,13 +168,15 @@ export const firstClassLessons: Card[] = [
 		website: null,
 		exams: null,
 		others: {
-			'Notlar': 'https://docs.google.com/document/d/1PpSWnqtg545U-E0eaGTC7NsozCidow3y/edit?usp=drive_link&ouid=111043157051224304507&rtpof=true&sd=true',
-			'Çalışma Soruları': 'https://drive.google.com/file/d/1B8NqPKOop5jBw3foG-7sTIpnxgxI-G_9/view?usp=drive_link',
+			// ! Notlar silinmiş.
+			//'Notlar': 'https://docs.google.com/document/d/1PpSWnqtg545U-E0eaGTC7NsozCidow3y/edit?usp=drive_link&ouid=111043157051224304507&rtpof=true&sd=true',
+			//'Çalışma Soruları': 'https://drive.google.com/file/d/1B8NqPKOop5jBw3foG-7sTIpnxgxI-G_9/view?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
 		keywords: ['temel bilgi ve iletişim teknolojileri', 'beb 650'],
 		createdAt: '2023-06-11',
+		shown: false,
 	},
 	{
 		code: 'TKD103',
@@ -177,12 +185,14 @@ export const firstClassLessons: Card[] = [
 		website: null,
 		exams: null,
 		others: {
-			'Notlar': 'https://drive.google.com/file/d/1C2IFnU56Lad00J3U3_jmn3S5XBe0f7IY/view?usp=drive_link',
+			// ! Notlar silinmiş.
+			//'Notlar': 'https://drive.google.com/file/d/1C2IFnU56Lad00J3U3_jmn3S5XBe0f7IY/view?usp=drive_link',
 		},
 		books: null,
 		badges: ['first-class'],
 		keywords: ['türk dili 103', 'türkçe 1'],
 		createdAt: '2023-06-11',
+		shown: false,
 	},
 	{
 		code: 'TKD104',
