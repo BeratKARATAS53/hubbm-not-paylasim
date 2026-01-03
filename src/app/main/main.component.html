@@ -1,123 +1,131 @@
 <div class="main text-center pb-2">
-	<h3>Notunuz Mu Var? Gelin Paylaşalım</h3>
-	<div class="search-bar input-group">
-		<input class="form-control" type="text" placeholder="Ara... (en az 3 karakter)" [(ngModel)]="searchText" (keyup)="search()">
-		<img class="input-group-text" src="../assets/search-icon.png" alt="search" width="40">
-	</div>
-	<div class="main-container d-flex">
-		<div class="side-panel">
-			<div class="profile">
-				<img src="../assets/profile.jpeg" alt="D. Berat KARATAŞ">
-				<h4>D. Berat KARATAŞ</h4>
-				<a href="https://berat-karatas.com" target="_blank">Hakkımda</a>
-			</div>
-			<div class="side-menu position-relative d-flex flex-column">
-				<button class="btn" [ngClass]="activeButton === 'home' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('home')">Ana Sayfa</button>
-				<button class="btn" [ngClass]="activeButton === 'first-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('first-class')">
-					1. Sınıf Dersleri
-					<span class="badge {{badgeClassMap['first-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'second-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('second-class')">
-					2. Sınıf Dersleri
-					<span class="badge {{badgeClassMap['second-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'third-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('third-class')">
-					3. Sınıf Dersleri
-					<span class="badge {{badgeClassMap['third-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'fourth-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('fourth-class')">
-					4. Sınıf Dersleri
-					<span class="badge {{badgeClassMap['fourth-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'technicals' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('technicals')">
-					Teknik Dersler
-					<span class="badge {{badgeClassMap['technicals']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'versionNotes' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('versionNotes')">Sürüm Notları</button>
-			</div>
-		</div>
+  <h3>Notunuz Mu Var? Gelin Paylaşalım</h3>
+  <div class="search-bar input-group">
+    <input class="form-control" type="text" placeholder="Ara... (en az 3 karakter)" [(ngModel)]="searchText" (keyup)="search()">
+    <img class="input-group-text" src="../assets/search-icon.png" alt="search" width="40">
+  </div>
+  <div class="main-container d-flex">
+    <div class="side-panel">
+      <div class="profile">
+        <img src="../assets/profile.jpeg" alt="D. Berat KARATAŞ">
+        <h4>D. Berat KARATAŞ</h4>
+        <a href="https://berat-karatas.com" target="_blank">Hakkımda</a>
+      </div>
+      <div class="side-menu position-relative d-flex flex-column">
+        <button class="btn" [ngClass]="activeButton === 'home' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('home')">Ana Sayfa</button>
+        <button class="btn" [ngClass]="activeButton === 'first-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('first-class')">
+          1. Sınıf Dersleri
+          <span class="badge {{badgeClassMap['first-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'second-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('second-class')">
+          2. Sınıf Dersleri
+          <span class="badge {{badgeClassMap['second-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'third-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('third-class')">
+          3. Sınıf Dersleri
+          <span class="badge {{badgeClassMap['third-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'fourth-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('fourth-class')">
+          4. Sınıf Dersleri
+          <span class="badge {{badgeClassMap['fourth-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'technicals' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('technicals')">
+          Teknik Dersler
+          <span class="badge {{badgeClassMap['technicals']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'versionNotes' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('versionNotes')">Sürüm Notları</button>
+      </div>
+    </div>
 
-		<div class="top-panel d-none">
-			<div class="mobile-profile">
-				<img class="photo" src="../assets/profile.jpeg" alt="D. Berat KARATAŞ">
-				<a href="https://beratkaratas53.github.io/profile-blog-deploy" target="_blank">Hakkımda</a>
-			</div>
-			<div class="divider"></div>
-			<div class="side-menu">
-				<button class="btn" [ngClass]="activeButton === 'home' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('home')">Ana Sayfa</button>
-				<button class="btn" [ngClass]="activeButton === 'first-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('first-class')">
-					1. Sınıf
-					<span class="badge {{badgeClassMap['first-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'second-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('second-class')">
-					2. Sınıf
-					<span class="badge {{badgeClassMap['second-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'third-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('third-class')">
-					3. Sınıf
-					<span class="badge {{badgeClassMap['third-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'fourth-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('fourth-class')">
-					4. Sınıf
-					<span class="badge {{badgeClassMap['fourth-class']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'technicals' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('technicals')">
-					Teknik
-					<span class="badge {{badgeClassMap['technicals']}}"></span>
-				</button>
-				<button class="btn" [ngClass]="activeButton === 'versionNotes' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('versionNotes')">Sürüm Notları</button>
-			</div>
-		</div>
+    <div class="top-panel d-none">
+      <div class="mobile-profile">
+        <img class="photo" src="../assets/profile.jpeg" alt="D. Berat KARATAŞ">
+        <a href="https://beratkaratas53.github.io/profile-blog-deploy" target="_blank">Hakkımda</a>
+      </div>
+      <div class="divider"></div>
+      <div class="side-menu">
+        <button class="btn" [ngClass]="activeButton === 'home' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('home')">Ana Sayfa</button>
+        <button class="btn" [ngClass]="activeButton === 'first-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('first-class')">
+          1. Sınıf
+          <span class="badge {{badgeClassMap['first-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'second-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('second-class')">
+          2. Sınıf
+          <span class="badge {{badgeClassMap['second-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'third-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('third-class')">
+          3. Sınıf
+          <span class="badge {{badgeClassMap['third-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'fourth-class' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('fourth-class')">
+          4. Sınıf
+          <span class="badge {{badgeClassMap['fourth-class']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'technicals' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('technicals')">
+          Teknik
+          <span class="badge {{badgeClassMap['technicals']}}"></span>
+        </button>
+        <button class="btn" [ngClass]="activeButton === 'versionNotes' ? 'btn-success' : 'btn-secondary'" (click)="changeActiveButton('versionNotes')">Sürüm Notları</button>
+      </div>
+    </div>
 
-		<div class="card-container d-flex flex-1 flex-wrap" [ngClass]="{'justify-content-center': activeButton !== 'versionNotes'}">
-			<ng-container *ngFor="let category of cardMap | keyvalue">
-				<div class="card" *ngFor="let card of category.value" (click)="openDetail(card)">
-					<span class="badge {{badgeClassMap[badge]}}" *ngFor="let badge of card.badges"></span>
-					<img [src]="card.image" [alt]="card.code">
-					<div class="card-body">
-						<h4 class="text-success">{{ card.code }}</h4>
-						<h6 class="text-success">{{ card.title }}</h6>
-					</div>
-					<span class="text-gray fs-10 mb-2 fw-bold">Tarih: {{ card.createdAt | date: 'fullDate' }}</span>
-				</div>
-			</ng-container>
+    <div class="card-container d-flex flex-1 flex-wrap" [ngClass]="{'justify-content-center': activeButton !== 'versionNotes'}">
+      @for (category of cardMap | keyvalue; track category) {
+        @for (card of category.value; track card) {
+          <div class="card" (click)="openDetail(card)">
+            @for (badge of card.badges; track badge) {
+              <span class="badge {{badgeClassMap[badge]}}"></span>
+            }
+            <img [src]="card.image" [alt]="card.code">
+            <div class="card-body">
+              <h4 class="text-success">{{ card.code }}</h4>
+              <h6 class="text-success">{{ card.title }}</h6>
+            </div>
+            <span class="text-gray fs-10 mb-2 fw-bold">Tarih: {{ card.createdAt | date: 'fullDate' }}</span>
+          </div>
+        }
+      }
 
-			<p *ngIf="notFound" class="text-primary mb-0">Aramanızla eşleşen ders bulunamadı. Arama kriterlerinize uygun elinizde kaynak varsa bana (<a class="text-success" href="mailto:007berat.karatas@gmail.com">007berat.karatas&#64;gmail.com</a>) e-posta gönderebilirsiniz.</p>
+      @if (notFound) {
+        <p class="text-primary mb-0">Aramanızla eşleşen ders bulunamadı. Arama kriterlerinize uygun elinizde kaynak varsa bana (<a class="text-success" href="mailto:007berat.karatas@gmail.com">007berat.karatas&#64;gmail.com</a>) e-posta gönderebilirsiniz.</p>
+      }
 
-			<div *ngIf="activeButton === 'versionNotes'" class="version-notes">
-				<span class="text-success">v1.00 (11 Haziran 2023):</span><br>
-				<ul>
-					<li>Yeni tasarım ile birlikte site yenilendi ve özel alan adına taşındı.</li>
-					<li>1. sınıf dersleri eklendi. (Yasin Şimsek'e teşekkürler.)</li>
-				</ul>
-				<span class="text-success">v0.39 (17 Ocak 2019):</span><br>
-				<ul>
-					<li>2. sınıf dersleri eklendi.</li>
-				</ul>
-				<span class="text-success">v0.26 (1 Aralık 2018):</span><br>
-				<ul>
-					<li>Bazı hatalardan dolayı reklam kaldırıldı.</li>
-					<li>Tema değiştirildi.&nbsp;</li>
-					<li>Site tasarımına ufak dokunuşlar yapıldı.</li>
-					<li>Sürüm Notları sayfası eklendi.</li>
-					<li>Bazı hatalar giderildi.</li>
-				</ul>
-				<span class="text-success">v0.13 (22 Kasım 2018):</span><br>
-				<ul>
-					<li>Haliyle ilk olarak site tasarlandı :D</li>
-					<li>Notları eklenecek dersler belirlendi.</li>
-					<li>Bazı zorunlu derslerin notları eklendi.</li>
-					<li>Reklam eklendi (Link.TL).</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="footer text-light">
-		<div>
-			<a class="text-primary" href="https://github.com/BeratKARATAS53/hubbm-not-paylasim" target="_blank">HUBBM Not Paylaşım, </a> Tüm Hakları Saklıdır.
-		</div>
-		<div>
-			<a class="text-success" href="https://beratkaratas53.github.io/profile-blog-deploy" target="_blank">D. Berat KARATAŞ</a> tarafından tasarlandı ve geliştirildi.
-		</div>
-	</div>
+      @if (activeButton === 'versionNotes') {
+        <div class="version-notes">
+          <span class="text-success">v1.00 (11 Haziran 2023):</span><br>
+          <ul>
+            <li>Yeni tasarım ile birlikte site yenilendi ve özel alan adına taşındı.</li>
+            <li>1. sınıf dersleri eklendi. (Yasin Şimsek'e teşekkürler.)</li>
+          </ul>
+          <span class="text-success">v0.39 (17 Ocak 2019):</span><br>
+          <ul>
+            <li>2. sınıf dersleri eklendi.</li>
+          </ul>
+          <span class="text-success">v0.26 (1 Aralık 2018):</span><br>
+          <ul>
+            <li>Bazı hatalardan dolayı reklam kaldırıldı.</li>
+            <li>Tema değiştirildi.&nbsp;</li>
+            <li>Site tasarımına ufak dokunuşlar yapıldı.</li>
+            <li>Sürüm Notları sayfası eklendi.</li>
+            <li>Bazı hatalar giderildi.</li>
+          </ul>
+          <span class="text-success">v0.13 (22 Kasım 2018):</span><br>
+          <ul>
+            <li>Haliyle ilk olarak site tasarlandı :D</li>
+            <li>Notları eklenecek dersler belirlendi.</li>
+            <li>Bazı zorunlu derslerin notları eklendi.</li>
+            <li>Reklam eklendi (Link.TL).</li>
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+  <div class="footer text-light">
+    <div>
+      <a class="text-primary" href="https://github.com/BeratKARATAS53/hubbm-not-paylasim" target="_blank">HUBBM Not Paylaşım, </a> Tüm Hakları Saklıdır.
+    </div>
+    <div>
+      <a class="text-success" href="https://beratkaratas53.github.io/profile-blog-deploy" target="_blank">D. Berat KARATAŞ</a> tarafından tasarlandı ve geliştirildi.
+    </div>
+  </div>
 </div>
