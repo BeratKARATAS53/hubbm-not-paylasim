@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $bg-color: #d9d9d91a;
 $primary: #a0e4ff;
 $success: #a2ffa0;
@@ -30,7 +32,7 @@ $colors: (
 		border: none;
 
 		&:hover {
-			background-color: darken($code, 5%);
+			background-color: color.scale($code, $lightness: -5%);
 			color: $text-dark-color;
 		}
 	}

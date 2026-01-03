@@ -1,18 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap');
-@import 'styles/colors';
+@use 'styles/colors' as *;
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-*, body, button, input, textarea, select {
+*,
+body,
+button,
+input,
+textarea,
+select {
 	font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 	background-color: #0d1117;
 	color: #e6edf3;
 	overflow-x: hidden;
@@ -22,13 +26,13 @@ a {
 	color: #60a5fa;
 	text-decoration: none;
 	transition: color 0.2s;
-  
-  &:hover {
-    color: #a2ffa0;
-  }
+
+	&:hover {
+		color: #a2ffa0;
+	}
 }
 
 ::selection {
-  background-color: rgba(162, 255, 160, 0.3);
-  color: #ffffff;
+	background-color: rgba(162, 255, 160, 0.3);
+	color: #ffffff;
 }

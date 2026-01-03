@@ -27,6 +27,9 @@ export class DetailsComponent implements OnInit {
 	ngOnInit() {
 		this.route.params.subscribe(params => {
 			const code = params['code'];
+			// Scroll pozisyonunu sıfırla
+			window.scrollTo(0, 0);
+			
 			if (code) {
 				this.card = this.lessonService.getLessonByCode(code);
 				if (this.card) {

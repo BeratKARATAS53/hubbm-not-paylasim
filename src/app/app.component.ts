@@ -16,6 +16,7 @@ export class AppComponent {
 	isDetailsPage = false;
 	showVersionNotes = false;
 	showContact = false;
+	mobileMenuOpen = false;
 
 	constructor(
 		private lessonService: LessonService,
@@ -46,17 +47,32 @@ export class AppComponent {
 		if (this.router.url.includes('/details/')) {
 			this.router.navigate(['/home']);
 		}
+		this.closeMobileMenu();
 	}
 
 	toggleVersionNotes(show: boolean) {
 		this.showVersionNotes = show;
+		if (show) {
+			this.closeMobileMenu();
+		}
 	}
 
 	toggleContact(show: boolean) {
 		this.showContact = show;
+		if (show) {
+			this.closeMobileMenu();
+		}
 	}
 
 	setLanguage(lang: string) {
 		this.translationService.setLanguage(lang);
+	}
+
+	toggleMobileMenu() {
+		this.mobileMenuOpen = !this.mobileMenuOpen;
+	}
+
+	closeMobileMenu() {
+		this.mobileMenuOpen = false;
 	}
 }
