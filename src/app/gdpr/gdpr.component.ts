@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'app-gdpr',
-	templateUrl: './gdpr.component.html',
-	styleUrls: ['./gdpr.component.scss']
+    selector: 'app-gdpr',
+    templateUrl: './gdpr.component.html',
+    styleUrls: ['./gdpr.component.scss'],
+    standalone: false
 })
 export class GDPRComponent {
 
