@@ -1,13 +1,24 @@
-@import '../../styles/colors';
+.gdpr-container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+	background-color: #161b22;
+	border: 1px solid #30363d;
+	border-radius: 16px;
+	color: #c9d1d9;
+	line-height: 1.6;
 
-* {
-	margin: 20px;
-}
+	h3 {
+		color: #a2ffa0;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
 
-p {
-	color: $light;
-}
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 
-h3 {
-	color: $success;
+	p {
+		margin-bottom: 1.5rem;
+	}
 }

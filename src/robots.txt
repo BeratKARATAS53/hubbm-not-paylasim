@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hubbm-notpaylasim.com/sitemap.xml

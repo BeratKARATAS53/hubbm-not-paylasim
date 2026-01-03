@@ -1,0 +1,48 @@
+<div class="modal-overlay" (click)="close()">
+	<div class="modal-content" (click)="$event.stopPropagation()">
+		<div class="modal-header">
+			<h2>{{ translationService.translate('versionNotes') }}</h2>
+			<button class="close-btn" (click)="close()">&times;</button>
+		</div>
+		<div class="modal-body">
+			<div class="note-box">
+				<div class="version-badge highlight">v2.0.0</div>
+				<span class="version-date">3 Ocak 2026</span>
+				<h3>{{ translationService.translate('premiumRedesign') }}</h3>
+				<ul>
+					<li><b>{{ translationService.translate('modernDesign') }}:</b> {{ translationService.translate('designSub') }}</li>
+					<li><b>{{ translationService.translate('speed') }}:</b> {{ translationService.translate('speedSub') }}</li>
+					<li><b>{{ translationService.translate('details') }}:</b> {{ translationService.translate('detailsSub') }}</li>
+					<li><b>{{ translationService.translate('shareFeat') }}:</b> {{ translationService.translate('shareFeatSub') }}</li>
+				</ul>
+			</div>
+
+			<div class="note-box legacy">
+				<div class="version-badge">v1.0.0</div>
+				<span class="version-date">11 Haziran 2023</span>
+				<p>{{ translationService.translate('v100') }}</p>
+			</div>
+
+			<div class="note-box legacy">
+				<div class="version-badge">v0.3.0</div>
+				<span class="version-date">17 Ocak 2019</span>
+				<p>{{ translationService.translate('v030') }}</p>
+			</div>
+
+			<div class="note-box legacy">
+				<div class="version-badge">v0.2.0</div>
+				<span class="version-date">1 Aralık 2018</span>
+				<p>{{ translationService.translate('v020') }}</p>
+			</div>
+			
+			<div class="note-box legacy">
+				<div class="version-badge">v0.1.0</div>
+				<span class="version-date">22 Kasım 2018</span>
+				<p>{{ translationService.translate('v010') }}</p>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-success" (click)="close()">{{ translationService.translate('understand') }}</button>
+		</div>
+	</div>
+</div>

@@ -1,44 +1,42 @@
 {
-  "name": "public",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "deploy": "ng build && netlify deploy --prod",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^21.0.6",
-    "@angular/common": "^21.0.6",
-    "@angular/compiler": "^21.0.6",
-    "@angular/core": "^21.0.6",
-    "@angular/forms": "^21.0.6",
-    "@angular/platform-browser": "^21.0.6",
-    "@angular/platform-browser-dynamic": "^21.0.6",
-    "@angular/router": "^21.0.6",
-    "@ng-bootstrap/ng-bootstrap": "^15.0.1",
-    "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.3.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.15.1"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^21.0.4",
-    "@angular/cli": "~21.0.4",
-    "@angular/compiler-cli": "^21.0.6",
-    "@angular/localize": "^21.0.6",
-    "@types/jasmine": "~4.3.0",
-    "@typescript-eslint/eslint-plugin": "^5.59.9",
-    "jasmine-core": "~4.6.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~5.9.3"
-  }
+	"name": "hubbm-not-paylasim",
+	"version": "1.1.0",
+	"scripts": {
+		"ng": "ng",
+		"prebuild": "node scripts/generate-sitemap.js",
+		"start": "ng serve",
+		"build": "npm run prebuild && ng build",
+		"deploy": "npm run build && netlify deploy --prod",
+		"watch": "ng build --watch --configuration development",
+		"test": "ng test"
+	},
+	"private": true,
+	"dependencies": {
+		"@angular/animations": "^21.0.6",
+		"@angular/common": "^21.0.6",
+		"@angular/compiler": "^21.0.6",
+		"@angular/core": "^21.0.6",
+		"@angular/forms": "^21.0.6",
+		"@angular/platform-browser": "^21.0.6",
+		"@angular/platform-browser-dynamic": "^21.0.6",
+		"@angular/router": "^21.0.6",
+		"rxjs": "~7.8.0",
+		"tslib": "^2.3.0",
+		"zone.js": "~0.15.1"
+	},
+	"devDependencies": {
+		"@angular-devkit/build-angular": "^21.0.4",
+		"@angular/cli": "~21.0.4",
+		"@angular/compiler-cli": "^21.0.6",
+		"@angular/localize": "^21.0.6",
+		"@types/jasmine": "~4.3.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.9",
+		"jasmine-core": "~4.6.0",
+		"karma": "~6.4.0",
+		"karma-chrome-launcher": "~3.2.0",
+		"karma-coverage": "~2.2.0",
+		"karma-jasmine": "~5.1.0",
+		"karma-jasmine-html-reporter": "~2.0.0",
+		"typescript": "~5.9.3"
+	}
 }

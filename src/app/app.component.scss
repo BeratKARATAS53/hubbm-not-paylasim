@@ -1,0 +1,270 @@
+:host {
+	display: block;
+	min-height: 100vh;
+	background-color: #0d1117;
+	color: #e6edf3;
+}
+
+.app-container {
+	display: flex;
+	min-height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+	width: 280px;
+	background-color: #161b22;
+	border-right: 1px solid #30363d;
+	display: flex;
+	flex-direction: column;
+	padding: 2rem 1.5rem;
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+.profile-section {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.avatar-container {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto 1rem;
+	border-radius: 50%;
+	padding: 4px;
+	background: linear-gradient(45deg, #a2ffa0, #60a5fa);
+}
+
+.avatar {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid #161b22;
+}
+
+.profile-name {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #a2ffa0;
+	margin-bottom: 0.25rem;
+}
+
+.profile-subtitle {
+	display: block;
+	font-size: 0.875rem;
+	color: #8b949e;
+	text-decoration: none;
+	transition: color 0.2s;
+
+	&:hover {
+		color: #8df69a;
+	}
+}
+
+.sidebar-nav {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	flex: 1;
+}
+
+.nav-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 1rem;
+	background-color: #21262d;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	color: #c9d1d9;
+	font-size: 0.95rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-align: left;
+
+	&:hover {
+		background-color: #30363d;
+		color: #ffffff;
+	}
+
+	&.active {
+		background-color: #8df69a;
+		color: #0d1117;
+		border-color: #8df69a;
+
+		.dot {
+			border: 1.5px solid #0d1117;
+		}
+	}
+
+	&.version-notes {
+		background-color: #21262d;
+		justify-content: center;
+
+		&.active {
+			background-color: #30363d;
+			color: #ffffff;
+		}
+	}
+}
+
+.lang-switcher {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	background-color: #21262d;
+	border-radius: 8px;
+	font-size: 0.85rem;
+
+	button {
+		background: none;
+		border: none;
+		color: #8b949e;
+		cursor: pointer;
+		font-weight: 600;
+		transition: color 0.2s;
+
+		&:hover {
+			color: #ffffff;
+		}
+
+		&.active {
+			color: #8df69a;
+		}
+	}
+
+	.divider {
+		color: #30363d;
+	}
+}
+
+
+.dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+
+	&.blue {
+		background-color: #60a5fa;
+	}
+
+	&.purple {
+		background-color: #a855f7;
+	}
+
+	&.red {
+		background-color: #f87171;
+	}
+
+	&.green {
+		background-color: #4ade80;
+	}
+
+	&.yellow {
+		background-color: #facc15;
+	}
+}
+
+.nav-spacer {
+	flex: 1;
+}
+
+/* Main Wrapper Styling */
+.main-wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.top-header {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.welcome-text {
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #a2ffa0;
+	text-align: center;
+	margin: 0;
+}
+
+.search-container {
+	width: 100%;
+	max-width: 600px;
+	position: relative;
+}
+
+.search-input {
+	width: 100%;
+	padding: 1rem 3rem 1rem 1.5rem;
+	background-color: rgba(22, 27, 34, 0.8);
+	border: 1px solid #30363d;
+	border-radius: 50px;
+	color: #e6edf3;
+	font-size: 1rem;
+	outline: none;
+	transition: all 0.2s ease;
+	backdrop-filter: blur(8px);
+
+	&:focus {
+		border-color: #8df69a;
+		box-shadow: 0 0 0 3px rgba(141, 246, 154, 0.1);
+	}
+}
+
+.search-icon {
+	position: absolute;
+	right: 1.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #60a5fa;
+	font-size: 1.2rem;
+}
+
+.content-area {
+	flex: 1;
+	padding: 0 2rem 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.app-footer {
+	padding: 2rem;
+	text-align: center;
+	color: #8b949e;
+	font-size: 0.875rem;
+	border-top: 1px solid #30363d;
+	margin-top: auto;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #234d31;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #2ea05a;
+}

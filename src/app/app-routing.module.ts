@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { GDPRComponent } from './gdpr/gdpr.component';
 import { MainComponent } from './main/main.component';
+import { DetailsComponent } from './details/details.component';
+import { GDPRComponent } from './gdpr/gdpr.component';
 
 const routes: Routes = [
-	{
-		path: '', component: AppComponent, children: [
-			{ path: '', redirectTo: 'home', pathMatch: 'full' },
-			{ path: 'home', component: MainComponent },
-			{ path: 'privacy', component: GDPRComponent }
-		]
-	},
+	{ path: '', redirectTo: 'home', pathMatch: 'full' },
+	{ path: 'home', component: MainComponent },
+	{ path: 'details/:code', component: DetailsComponent },
+	{ path: 'privacy', component: GDPRComponent },
+	{ path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

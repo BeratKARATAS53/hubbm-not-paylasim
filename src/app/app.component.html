@@ -1,1 +1,83 @@
-<router-outlet></router-outlet>
+<div class="app-container">
+	<!-- Sidebar -->
+	<aside class="sidebar">
+		<div class="profile-section">
+			<div class="avatar-container">
+				<img src="assets/profile.jpeg" alt="D. Berat KARATAŞ" class="avatar">
+			</div>
+			<h2 class="profile-name">D. Berat KARATAŞ</h2>
+			<a href="https://berat-karatas.com" target="_blank" class="profile-subtitle">{{ translationService.translate('aboutMe') }}</a>
+		</div>
+
+		<nav class="sidebar-nav">
+			<button class="nav-item" [class.active]="activeFilter === 'home'" (click)="setFilter('home')">
+				{{ translationService.translate('home') }}
+			</button>
+			<button class="nav-item" [class.active]="activeFilter === 'first-class'" (click)="setFilter('first-class')">
+				<span>{{ translationService.translate('firstClassLessons') }}</span>
+				<span class="dot blue"></span>
+			</button>
+			<button class="nav-item" [class.active]="activeFilter === 'second-class'"
+				(click)="setFilter('second-class')">
+				<span>{{ translationService.translate('secondClassLessons') }}</span>
+				<span class="dot purple"></span>
+			</button>
+			<button class="nav-item" [class.active]="activeFilter === 'third-class'" (click)="setFilter('third-class')">
+				<span>{{ translationService.translate('thirdClassLessons') }}</span>
+				<span class="dot red"></span>
+			</button>
+			<button class="nav-item" [class.active]="activeFilter === 'fourth-class'"
+				(click)="setFilter('fourth-class')">
+				<span>{{ translationService.translate('fourthClassLessons') }}</span>
+				<span class="dot green"></span>
+			</button>
+			<button class="nav-item" [class.active]="activeFilter === 'technicals'" (click)="setFilter('technicals')">
+				<span>{{ translationService.translate('technicalLessons') }}</span>
+				<span class="dot yellow"></span>
+			</button>
+
+			<div class="nav-spacer"></div>
+
+			<div class="lang-switcher">
+				<button (click)="setLanguage('tr')" [class.active]="translationService.getCurrentLang() === 'tr'">TR</button>
+				<span class="divider">|</span>
+				<button (click)="setLanguage('en')" [class.active]="translationService.getCurrentLang() === 'en'">EN</button>
+			</div>
+
+			<button class="nav-item version-notes" (click)="toggleContact(true)" style="margin-bottom: 0.5rem;">
+				{{ translationService.translate('contactMe') }}
+			</button>
+
+			<button class="nav-item version-notes" (click)="toggleVersionNotes(true)">
+				{{ translationService.translate('versionNotes') }}
+			</button>
+		</nav>
+	</aside>
+
+	<!-- Version Notes Modal -->
+	<app-version-notes *ngIf="showVersionNotes" (closeEvent)="toggleVersionNotes(false)"></app-version-notes>
+
+	<!-- Contact Modal -->
+	<app-contact *ngIf="showContact" (closeEvent)="toggleContact(false)"></app-contact>
+
+	<!-- Main Content Wrapper -->
+	<div class="main-wrapper">
+		<header class="top-header">
+			<h1 class="welcome-text">{{ translationService.translate('welcomeText') }}</h1>
+
+			<div class="search-container" *ngIf="!isDetailsPage">
+				<input type="text" [placeholder]="translationService.translate('searchPlaceholder')" [(ngModel)]="searchText"
+					(ngModelChange)="onSearchChange()" class="search-input">
+				<span class="search-icon">🔍</span>
+			</div>
+		</header>
+
+		<main class="content-area">
+			<router-outlet></router-outlet>
+		</main>
+
+		<footer class="app-footer">
+			<p>{{ translationService.translate('copyright') }}</p>
+		</footer>
+	</div>
+</div>

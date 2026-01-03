@@ -1,34 +1,74 @@
-<div class="modal-header">
-	<img [src]="card.image" [alt]="card.code" width="500">
-	<h4 class="modal-title text-center">{{ card.code }} - {{ card.title | uppercase }}</h4>
-	<span class="text-gray fs-10 mb-2 fw-bold">Tarih: {{ card.createdAt | date: 'fullDate' }}</span>
-</div>
-<div class="modal-body">
-	<p *ngIf="card.website">
-		<span class="text-success">Site: </span>
-		<a class="text-primary" [href]="card.website" target="_blank">{{ card.website }}</a>
-	</p>
-	<p *ngIf="card.exams">
-		<span class="text-success">Sınavlar: </span>
-		<a class="text-primary" [href]="card.exams" target="_blank">{{ card.exams }}</a>
-	</p>
-	<p *ngIf="card.others">
-		<span class="text-success">Yararlı Notlar veya Linkler: </span>
-		<ul>
-			<li *ngFor="let other of card.others | keyvalue" class="text-warning">
-				{{ other.key }}:
-				<a class="text-primary" [href]="other.value" target="_blank">{{ other.value }}</a>
-			</li>
-		</ul>
-	<p *ngIf="card.books">
-		<span class="text-success">Yararlı Kitaplar: </span>
-		<ul>
-			<li *ngFor="let book of card.books | keyvalue" class="text-warning">
-				{{ book.key }}:
-				<a class="text-primary" [href]="book.value" target="_blank">{{ book.value }}</a>
-			</li>
-		</ul>
-</div>
-<div class="modal-footer">
-	<button type="button" class="btn btn-success" (click)="close()">Kapat</button>
+<div class="details-container" *ngIf="card">
+	<button class="back-button" (click)="goBack()">
+		<span class="back-icon">←</span> {{ translationService.translate('back') }}
+	</button>
+
+	<header class="details-header">
+		<div class="header-image-wrapper">
+			<img [src]="card.image" [alt]="card.title" class="header-image">
+			<div class="header-overlay"></div>
+		</div>
+		<div class="header-content">
+			<h1 class="lesson-full-title">{{ card.code }} - {{ translationService.translate(card.code) }}</h1>
+			<p class="lesson-date">{{ translationService.translate('datePrefix') }}: {{ card.createdAt || '11 Haziran 2023 Pazar' }}</p>
+		</div>
+	</header>
+
+	<section class="details-section">
+		<h2 class="section-title">
+			<span class="icon">ℹ️</span> {{ translationService.translate('aboutCourse') }}
+		</h2>
+		<div class="section-content">
+			<p *ngIf="translationService.getCurrentLang() === 'tr'">Bu ders, "{{ translationService.translate(card.code) }}" dersinin temel prensiplerini kapsar. Aşağıdaki notlar, dersin anlaşılmasına yardımcı olmak amacıyla derlenmiştir.</p>
+			<p *ngIf="translationService.getCurrentLang() === 'en'">This course covers the basic principles of {{ translationService.translate(card.code).toLowerCase() }}. The following notes were compiled to help understand the course.</p>
+			
+			<p *ngIf="translationService.getCurrentLang() === 'tr'">Bu notlar, yukarıda belirtilen tarihten önceki verilerle hazırlanmıştır. Güncel veriler için <a href="https://cs.hacettepe.edu.tr/index_tr.html#course_pages_ce" target="_blank">Hacettepe Üniversitesi | BM Lisans</a> sitesini ziyaret edebilirsiniz.</p>
+			<p *ngIf="translationService.getCurrentLang() === 'en'">These notes were prepared with data prior to the date mentioned above. You can visit the <a href="https://cs.hacettepe.edu.tr/index_en.html#course_pages_ce" target="_blank">Hacettepe University | CS Undergraduate</a> site for up-to-date data.</p>
+		</div>
+	</section>
+
+	<section class="details-section">
+		<h2 class="section-title">
+			<span class="icon">📂</span> {{ translationService.translate('usefulLinks') }}:
+		</h2>
+		<div class="links-list">
+			<div class="link-item" *ngIf="card.website">
+				<div class="link-number">1</div>
+				<div class="link-text">
+					<p class="link-label">{{ translationService.translate('coursePage') }}</p>
+					<a [href]="card.website" target="_blank" class="link-url">{{ card.website }}</a>
+				</div>
+			</div>
+
+			<div class="link-item" *ngFor="let entry of card.others | keyvalue; let i = index">
+				<div class="link-number">{{ (card.website ? 2 : 1) + i }}</div>
+				<div class="link-text">
+					<p class="link-label">{{ entry.key }}</p>
+					<a [href]="entry.value" target="_blank" class="link-url">{{ entry.value }}</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="details-section" *ngIf="card.books && (card.books | keyvalue).length > 0">
+		<h2 class="section-title">
+			<span class="icon">📚</span> {{ translationService.translate('books') }}:
+		</h2>
+		<div class="links-list">
+			<div class="link-item" *ngFor="let entry of card.books | keyvalue; let i = index">
+				<div class="link-number">{{ i + 1 }}</div>
+				<div class="link-text">
+					<p class="link-label">{{ entry.key }}</p>
+					<a [href]="entry.value" target="_blank" class="link-url">{{ entry.value }}</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="details-footer">
+		<button class="btn btn-dark" [class.btn-copied]="isCopied" (click)="share()">
+			{{ isCopied ? translationService.translate('copied') : translationService.translate('copyLink') }}
+		</button>
+		<button class="btn btn-success" (click)="goBack()">{{ translationService.translate('close') }}</button>
+	</footer>
 </div>

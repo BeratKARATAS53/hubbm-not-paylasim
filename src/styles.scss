@@ -1,58 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap');
 @import 'styles/colors';
 
+* {
+  box-sizing: border-box;
+}
+
+*, body, button, input, textarea, select {
+	font-family: 'Montserrat', sans-serif;
+}
+
 body {
-	background-color: #161722 !important;
-	display: flex;
-	justify-content: center;
-	color: $success !important;
-	font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+	background-color: #0d1117;
+	color: #e6edf3;
 	overflow-x: hidden;
 }
 
 a {
-	color: #8E8E8E !important;
-	text-decoration: none !important;
-	outline: none !important;
+	color: #60a5fa;
+	text-decoration: none;
+	transition: color 0.2s;
+  
+  &:hover {
+    color: #a2ffa0;
+  }
 }
 
-::-webkit-scrollbar {
-	width: 7px;
-	height: 4px;
-	background: $bg-color;
-	border-radius: 5px;
+::selection {
+  background-color: rgba(162, 255, 160, 0.3);
+  color: #ffffff;
 }
-
-::-webkit-scrollbar-thumb {
-	background: $success;
-	border-radius: 5px;
-}
-
-.badge {
-	display: flex;
-	width: 20px;
-	height: 20px;
-	border-radius: 50% !important;
-	position: absolute !important;
-	right: 5px;
-
-	@for $i from 1 through 3 {
-		&:nth-child(#{$i}) {
-			top: #{5px + ($i - 1) * 25px};
-		}
-	}
-
-	&:empty {
-		display: block !important;
-	}
-}
-
-@for $i from 1 through 16 {
-	.fs-#{$i} {
-		font-size: #{$i}px;
-	}
-}
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';

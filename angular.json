@@ -36,6 +36,8 @@
 						"assets": [
 							"src/favicon.ico",
 							"src/assets",
+							"src/sitemap.xml",
+							"src/robots.txt",
 							{
 								"glob": "_redirects",
 								"input": "src",
@@ -53,6 +55,11 @@
 						"styles": [
 							"src/styles.scss"
 						],
+						"stylePreprocessorOptions": {
+							"includePaths": [
+								"src"
+							]
+						},
 						"tsConfig": "tsconfig.app.json"
 					}
 				},
