@@ -67,6 +67,7 @@ export class TranslationService {
 		'sending': { tr: 'Gönderiliyor...', en: 'Sending...' },
 		'messageSent': { tr: 'Mesajınız başarıyla iletildi!', en: 'Your message has been sent successfully!' },
 		'messageError': { tr: 'Mesaj gönderilirken bir hata oluştu.', en: 'An error occurred while sending the message.' },
+		'validationError': { tr: 'Lütfen tüm alanları doldurun.', en: 'Please fill in all fields.' },
 
 		'understand': { tr: 'Anladım', en: 'Got it' },
 		'datePrefix': { tr: 'Tarih', en: 'Date' },

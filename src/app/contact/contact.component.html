@@ -29,6 +29,9 @@
 				<div *ngIf="isSuccess" class="alert alert-success">
 					{{ translationService.translate('messageSent') }}
 				</div>
+				<div *ngIf="validationError" class="alert alert-error">
+					{{ translationService.translate('validationError') }}
+				</div>
 				<div *ngIf="isError" class="alert alert-error">
 					{{ translationService.translate('messageError') }}
 				</div>

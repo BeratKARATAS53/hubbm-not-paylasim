@@ -22,6 +22,7 @@ export class ContactComponent {
 	isSending = false;
 	isSuccess = false;
 	isError = false;
+	validationError = false;
 
 	constructor(
 		private http: HttpClient,
@@ -35,6 +36,21 @@ export class ContactComponent {
 	onSubmit() {
 		if (this.isSending) return;
 
+		// Trim yap ve boş alan kontrolü
+		this.formData.name = this.formData.name.trim();
+		this.formData.email = this.formData.email.trim();
+		this.formData.subject = this.formData.subject.trim();
+		this.formData.content = this.formData.content.trim();
+
+		// Boş alan kontrolü
+		if (!this.formData.name || !this.formData.email || !this.formData.subject || !this.formData.content) {
+			this.validationError = true;
+			this.isError = false;
+			this.isSuccess = false;
+			return;
+		}
+
+		this.validationError = false;
 		this.isSending = true;
 		this.isSuccess = false;
 		this.isError = false;
